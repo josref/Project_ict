@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Formulieren post</title>
+	</head>
+	
+	<body>
+		
+		<form action="toon_waarden_post.php" method="post" >
+
+        	<p>Voornaam : <input type="text" name="voornaam" /></p>
+        	<!-- je vindt na submit de voornaam terug in $_POST['voornaam'] -->
+        	
+			<p>Achternaam : <input type="text" name="achternaam" /></p>
+			<p>Telefoon nr. : <input type="text" name="telefoon" /></p>
+			
+			
+			<p>gerechten:</p>
+			<div>
+			<p>Gold plated cheese burger &euro; 500 <input type="number" name="cheese_burger" /></p>
+			<p>Beef wellington &euro; 200 <input type="number" name="beef_wellington" /></p>
+			<p>Premium A5 Wagyu Steak &euro; 249.99  <input type="number" name="steak" /> </p>
+			<p>Barbeque smoked babyback ribs &euro; 60 <input type="number" name="ribs" /></p>
+			<p>Mac and cheese met crispy bacon &euro; 15 <input type="number" name="mac" /></p>
+			</div>
+			
+			<p>Met caviaar &euro; 50: <input type="checkbox" name="caviaar" value="ja"/></p>
+			<p>Opmerkingen :</p><p> <textarea name="opmerkingen" rows="10" cols="30">						
+			</textarea></p>	
+			<p>afhaaluur : <select id="uur" name="uur" >
+				 <option value="18:00">18:00</option>
+				 <option value="18:30">18:30</option>
+				 <option value="19:00">19:00</option>
+				 <option value="19:30">19:30</option>
+				 <option value="20:00">20:00</option>
+				 <option value="20:30">20:30</option>
+				 <option value="21:00">21:00</option>
+				 <option value="21:30">21:30</option>
+				 <option value="22:00">22:00</option>
+			</select></p>
+			<p>Einde : <input type="submit" name="verzend" value="Verzend formulier" /></p>
+        
+        </form>
+		
+				
+		
+	
+	</body>	
+	
+</html>

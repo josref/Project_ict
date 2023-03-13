@@ -1,0 +1,49 @@
+p{ color:"tomato";}
+h1{							
+	font-size:200px;
+	background-color:"violet";	
+	color:"green";	
+						 
+}
+.btn{
+	appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    -ms-appearance: button;
+	color:"green";
+	width: 100%;
+	color: white;
+
+	
+}
+body {
+  
+
+}
+button{
+	width: 100%;
+	height: 40px;
+	color: white;
+	/*background: transparent;*/
+    border: 2px solid black;
+	border-color: white;
+	background-color: rgb(41,155,192);
+	border-radius: 2px;
+	
+}
+.menu{
+	background-color: rgb(41,155,192);
+}
+img {
+  width: 100%;
+  height: auto;
+  border-style: none;
+  outline: none;
+}
+div{
+	offset: 200px;
+}
+button:hover{
+	background-color: white;
+	color:rgb(41,155,192);
+}
