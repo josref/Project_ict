@@ -8,5 +8,39 @@
 <body>
 		<h1>Les 4</h1>
 		<p>Tijdens deze les leerden we hoe we onze arduino kunnen programmeren. We leerden hoe we simpele codes moeten schrijven om bijvoorbeeld een led te laten knipperen. Ook zagen we dat je de waarden van de verschillende censoren kunt doorsturen via een antenne. Hierdoor kun je bijvoorbeeld iemand op afstand laten weten hoe warm het is en wat de lichtintensiteit op de locatie van de arduino is. We maakten ook een programma om gordijnen automatisch dicht te doen als het donker wordt.</p>
+		<pre>
+			#include &lt;Dramco-UNO.h&gt;
+
+
+				LoraParam DevEUI = "************";
+				LoraParam AppKey = "********************************";
+				
+				void setup() {
+				  // put your setup code here, to run once:
+				  DramcoUno.begin(DevEUI, AppKey);
+				  pinMode(10,OUTPUT);
+				  Serial.begin(9600);
+				
+				}
+				int licht_threshold=50;
+				int licht;
+				void loop() {
+				  // put your main code here, to run repeatedly:
+				  licht=DramcoUno.readLuminosity();
+					Serial.println(licht);
+					
+				  if(licht < licht_threshold){
+					 digitalWrite(10,HIGH);
+					//doe gordijnen dicht
+				  }else{
+					digitalWrite(10,LOW);
+					//doe gordijnen open
+				  }
+				   DramcoUno.addLuminosity();
+				   DramcoUno.send();
+				   DramcoUno.delay(10000);
+					
+				}
+		</pre>
 </body>
 </html>
