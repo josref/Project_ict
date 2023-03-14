@@ -1,8 +1,16 @@
-p{ color:"tomato";}
+p{ 
+	font-size: 25px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 50px;
+	font-family:'Times New Roman', Times, serif;
+
+}
 h1{							
-	font-size:200px;
+	
 	background-color:"violet";	
 	color:"green";	
+	text-align: center;
 						 
 }
 .btn{
@@ -15,10 +23,6 @@ h1{
 	color: white;
 
 	
-}
-body {
-  
-
 }
 button{
 	width: 100%;
@@ -34,16 +38,42 @@ button{
 .menu{
 	background-color: rgb(41,155,192);
 }
-img {
+.logo {
   width: 100%;
   height: auto;
   border-style: none;
   outline: none;
 }
 div{
-	offset: 200px;
+	/*offset: 200px;*/
+	margin-top: 1em ;
+	margin-bottom: 1em ;
 }
 button:hover{
-	background-color: white;
+	background-color: white 	;
 	color:rgb(41,155,192);
 }
+body{
+	background-color:rgba(243, 240, 237, 0.89);
+}
+
+img.dramco{
+	width: 25%;
+	height: auto;
+	align-self: center;
+	margin-left: 0px;
+	margin-right: 12.5%;
+
+
+
+}
+.container {
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	/*width: 25%;*/
+	height: auto;
+	float:none;
+	margin-left: 25%;
+	
+  }
